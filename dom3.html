@@ -1,0 +1,13 @@
+<input type="text" placeholder="Celsius" id="celcius"/>
+<button onclick="changeToF()">Enter</button>
+<p>Text goes Here</p>
+
+<script>
+    function changeToF(){
+        var celciusInput = document.querySelector('celcius').value;
+        var fahrenheit = (celciusInput * 9/5) + 32;
+        console.log(celciusInput , typeof celciusInput);
+
+        document.querySelector('p').innerText =`F: ${fahrenheit}`;
+    }
+</script>

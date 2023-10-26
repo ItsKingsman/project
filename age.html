@@ -1,0 +1,12 @@
+<script>
+      function calculateAge(birthdate){
+        var birthDate = new Date(birthdate);
+        var currentDate = new Date();
+        var age = currentDate.getFullYear() - birthDate.getFullYear();
+        return age;
+      }
+
+      var birthdate ="2006-03-29";
+      var age = calculateAge(birthdate);
+      console.log(`Age: ${age} years`);
+</script>

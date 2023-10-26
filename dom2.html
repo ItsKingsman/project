@@ -1,0 +1,47 @@
+<!-- Onclick change name to capital  -->
+
+<input type="text" placeholder="Temp" id="inputcel"/>
+<button onclick="myfunc()" >Enter</button>
+<p></p>
+
+<script>
+     function myfunc(){
+       var celsius = document.getElementById('inputcel').value;
+       var rec2 =  fahrenheit = (celsius * 9/5) + 32;
+       document.getElementById("p").innerHTML= `Farenhet: ${rec2}`;
+     }
+</script>
+
+<!-- onclick number square root -->
+<h3>Enter Number to gets Roots</h3>
+<input type="text" placeholder="number" id="num"/><button onclick="getroots()">Enter</button>
+<p>Square Root:</p>
+<p>Cube Roots:</p>
+<br>
+
+<script>
+    function getroots(){
+        var sqrt = document.querySelector("#num").value;
+        document.querySelectorAll("p")[0].innerHTML = Number (sqrt) ** 2;
+        document.querySelectorAll("p")[1].innerHTML = Number (sqrt) ** 3;
+    }
+</script>
+
+<!-- quantity multiplier -->
+<h3>Quantity Multiplier</h3>
+
+<input type="text" placeholder="Price" id="txt1"/>
+<input type="text" placeholder="quantity" id="txt2"/>
+<button onclick="myfunc2()">Enter</button>
+<p></p>
+
+<script>
+    function myfunc2(){
+         var numBer =document.querySelector('#txt1').value;
+         var qt =document.querySelector('#txt2').value;
+
+         document.querySelectorAll("p")[2].innerHTML= Number(numBer) * Number(qt);
+    }
+</script>
+
+<inpu

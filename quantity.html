@@ -1,0 +1,14 @@
+<script>
+    var unitPrice = 1000;
+    var discount = 10;
+    var quantity = 5;
+    function quantityCalculator(unitPrice, discount, quantity){
+        var discountedUnitPrice = unitPrice-(unitPrice * (discount /100));
+        var totalCost = discountedUnitPrice * quantity;
+        
+        console.log("Discount prise:" ,discountedUnitPrice);
+        return totalCost;
+    }
+    var totalCost = quantityCalculator(unitPrice, quantity, discount);
+    console.log("Total Cost with Discount:", totalCost);
+</script>

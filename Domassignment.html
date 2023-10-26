@@ -1,0 +1,124 @@
+<!-- onbutton click change background-Color -->
+<h3>Click Here to change Background Color</h3>
+<button onclick="myfunc()">Press</button>
+<br>
+<br>
+<script>
+    function myfunc(){
+       document.body.className = "xyz";
+    }
+</script>
+<style>
+    .xyz{
+        background-color: red;
+    }
+    
+</style>
+
+<!-- img on hover change dimention of image usin javacript dom element -->
+
+<img id="mouseevent" onmouseover ="mouseover()" onmouseout="mouseout()" width="200px" height="150px" src="https://rukminim2.flixcart.com/image/150/150/xif0q/shoe/t/h/o/6-786-labbin-brown-original-imagngj44gw4mzvd.jpeg?q=70">
+<br>
+<br>
+<script>
+     function mouseover(){
+             document.getElementById('mouseevent').src="https://rukminim2.flixcart.com/image/150/150/xif0q/shoe/t/h/o/6-786-labbin-brown-original-imagngj44gw4mzvd.jpeg?q=70";
+            document.getElementById('mouseevent').width= 300;
+            document.getElementById('mouseevent').height= 200;
+            
+    }   
+    
+    function mouseout(){
+             document.getElementById('mouseevent').src="https://rukminim2.flixcart.com/image/150/150/xif0q/shoe/t/h/o/6-786-labbin-brown-original-imagngj44gw4mzvd.jpeg?q=70";
+            document.getElementById('mouseevent').width= 200;
+            document.getElementById('mouseevent').height= 150;
+    }   
+</script>
+
+<!-- change button text -->
+
+<h3>Press button to change button text</h3>
+<button id="text" onclick="myfunc2()">Click To change</button><br><br>
+ <script>
+    function myfunc2(){
+           document.querySelector('#text').innerText ="Text Changed succesfully";
+    }
+ </script>
+
+ <!-- on hover convert to circle -->
+
+ <div id="size" onmouseover="sizeChange()">
+    
+ </div>
+
+ <script>
+    function sizeChange(){
+        document.getElementById('size').style.borderRadius = '50%';
+        
+        
+    }
+ </script>
+
+ <style>
+    #size{
+        border: 1px solid;
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+ </style>
+
+<!-- onclick h1 content to right and h2 content center -->
+
+<div class="shift">
+     <h1>To the Right</h1>
+     <h2>To the Center</h2>
+</div>
+<button onclick="shift()">Hit the button</button>
+
+<script>
+     var shift =function() {
+          document.querySelector('h1').style.textAlign ="right";
+          document.querySelector('h2').style.textAlign ="center";
+     }
+</script>
+
+<!-- onclick content empty -->
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nisi quia ipsum. Error totam saepe repudiandae nesciunt nostrum accusantium, magnam nemo molestias necessitatibus reiciendis sint fuga fugit, quis consequuntur sapiente!
+
+</p>
+<button onclick="disapear()">Click to Erase</button><br><br>
+
+<script>
+    var disapear = function(){
+        document.querySelector('p').innerText="Erased"
+    }
+</script>
+
+<!-- onclick txt bx ka width 300px -->
+
+<input type="text" id="wid" />
+<button onfocus="inc()">Increase width </button> <br><br>
+
+<script>
+    function inc(){
+        document.getElementById('wid').style.width="500px";
+    }
+</script>
+<style>
+    #wid{
+        width: 200px;
+    }
+</style>
+
+<!-- on hover change image -->
+
+
+      <img width="300px" src='image/img1.png' id="imga2" onmouseover="myfunc4()">
+
+<script>
+    function myfunc4(){
+        document.getElementById('imga2').src = "image/img2.png";
+    }
+</script>
