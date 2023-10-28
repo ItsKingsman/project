@@ -1,23 +1,10 @@
-<!-- Onclick change name to capital  -->
-
-<input type="text" placeholder="Temp" id="inputcel"/>
-<button onclick="myfunc()" >Enter</button>
-<p></p>
-
-<script>
-     function myfunc(){
-       var celsius = document.getElementById('inputcel').value;
-       var rec2 =  fahrenheit = (celsius * 9/5) + 32;
-       document.getElementById("p").innerHTML= `Farenhet: ${rec2}`;
-     }
-</script>
-
-<!-- onclick number square root -->
+<!-- To find Sqroot -->
 <h3>Enter Number to gets Roots</h3>
 <input type="text" placeholder="number" id="num"/><button onclick="getroots()">Enter</button>
 <p>Square Root:</p>
 <p>Cube Roots:</p>
 <br>
+<hr>
 
 <script>
     function getroots(){
@@ -33,7 +20,8 @@
 <input type="text" placeholder="Price" id="txt1"/>
 <input type="text" placeholder="quantity" id="txt2"/>
 <button onclick="myfunc2()">Enter</button>
-<p></p>
+<p>Multiplier</p>
+<hr>
 
 <script>
     function myfunc2(){
@@ -44,4 +32,113 @@
     }
 </script>
 
-<inpu
+<!-- Caps on Caps off -->
+
+<input type="text" id="mention" />
+<button onclick="nameUpperCase()">Enter</button>
+<p id="p1" >Caps On</p>
+<p id="p2" >Caps off</p>
+<hr>
+
+<script>
+    function nameUpperCase(){
+        var pTag = document.querySelector('#mention').value;
+        console.log(pTag);
+       document.querySelector('#p1').innerHTML = pTag.toUpperCase();
+       document.querySelector('#p2').innerHTML = pTag.toLowerCase();
+    }
+</script>
+
+<!-- Date picker -->
+<h3>Age Calculator</h3>
+<input type="text" id="datePick" />
+<button onclick="ageGetter()">Enter</button>
+<p id="ager">Age Comes Here</p>
+<hr>
+
+<script>
+    
+    function ageGetter(){
+        var dater = document.querySelector('#datePick').value;
+        console.log(dater);
+
+        var ans = dater.split('-');
+   console.log(ans);
+   console.log(ans[0]);
+
+   var age = 2023 - ans[0];
+   console.log(age);
+   document.querySelector("#ager").innerHTML = age;
+    }
+</script>
+  
+<h3>Enter width</h3>
+<input type="text" id="widthChanger" />
+<button onclick="func67()">Enter</button>
+<p id="widththe" style="border: solid;">Width</p>
+<hr>
+
+<script>
+    function func67(){
+        var done = document.querySelector('#widthChanger').value;
+        console.log(done);
+        document.querySelector('#widththe').style.width =done;
+    }
+</script>
+
+<h3>Enter color</h3>
+<input type="text" id="colorChanger" />
+<button onclick="func68()">Enter</button>
+<br><br>
+<input id="colorans" />
+<hr>
+
+<script>
+    function func68(){
+        var clor = document.querySelector('#colorChanger').value;
+        console.log(clor);
+        document.querySelector('#colorans').style.backgroundColor = clor;
+    }
+</script>
+
+<input type="text" id="tempt"/>
+<button onclick="func89()">enter</button>
+<p id="temptAns">Temp</p>
+<hr>
+
+<script>
+    function func89(){
+        var fahrenheit = document.querySelector('#tempt').value;
+        console.log(fahrenheit);
+        var fahrenheit2 =  (fahrenheit * 9/5) + 32;
+        console.log(fahrenheit2);
+        document.querySelector('#temptAns').innerHTML =fahrenheit2;
+    }
+</script>
+
+<h3>Emi and S.I calculator </h3>
+<input type="text" id="value1"/>
+<input type="text" id="value2"/>
+<input type="text" id="value3"/>
+<button onclick="func98()">Enter</button>
+<p id="interest"></p>
+<p></p>
+
+<script>
+    function func98(){
+        var mimi1 = document.querySelector('#value1').value;
+        console.log(mimi1);
+        var mimi2 = document.querySelector('#value2').value;
+        console.log(mimi2);
+        var mimi3 = document.querySelector('#value3').value;
+        console.log(mimi3);
+
+        var p = Number (mimi1);
+        var r = Number (mimi2);
+        var n = Number (mimi3);
+        var SI =p*r*n/100;
+        document.querySelector("#interest").innerHTML = SI;
+
+        
+    }
+</script>

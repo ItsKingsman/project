@@ -1,0 +1,86 @@
+<h3>Enter Numbers to get Colors</h3>
+<input type="text" id="text1"/>
+<input type="text" id="text2"/>
+<input type="text" id="text3"/> 
+<button onclick="myfunc1()">Enter</button>
+<br><br>
+<input type="text" id="text4" placeholder="Color Pops Here" style="width: 300px; text-align: center; height: 50px; " />
+<hr>
+<script>
+    function myfunc1(){
+        var col1 = document.querySelector('#text1').value;
+        console.log(col1);
+        var col2 = document.querySelector('#text2').value;
+        console.log(col2);
+        var col3 = document.querySelector('#text3').value;
+        console.log(col3);
+        document.querySelector('#text4').value= Number(col1) + Number(col2)  + Number(col3);
+        document.querySelector('#text4').style.backgroundColor = Number(col1) + Number(col2)  + Number(col3);
+    }
+</script>
+
+<h3>Left / Right / Center</h3>
+<input type="text" id="main"/> 
+<button onclick="myfunc2()">Enter</button>
+<br><br>
+<input type="text" id="main1"  style="width: 300px; text-align: center; height: 100px; " />
+<hr>
+
+
+<script>
+    function myfunc2(){
+        var center = document.querySelector('#main').value;
+        console.log(center);
+        document.querySelector('#main1').value= "Hello world";
+        document.querySelector('#main1').style.textAlign = center;
+    }
+</script>
+
+<h3>Signal</h3>
+<input id="signal" type="text"/>
+<button onclick="signal1()">Enter</button>
+<br> <br>
+<div class="container" id="color">
+    <div class="point1"></div>
+    <div class="point2"></div>
+    <div class="point3"></div>
+    <div class="point4"></div>
+</div>
+
+<style>
+    .container{
+    display: flex;
+    position: absolute;
+    
+    }
+    .point1{
+        width : 5px;
+        height: 10px;
+        border: 2px solid;
+    }
+    .point2{
+        width : 5px;
+        height: 20px;
+        border: 2px solid;
+        
+        
+    }
+    .point3{
+        width : 5px;
+        height: 30px;
+        border: 2px solid;
+        }
+        .point4{
+        width : 5px;
+        height: 40px;
+        border: 2px solid;  
+        } 
+</style>
+
+<script>
+    function signal1(){
+        var strength = document.querySelector('#signal').value;
+        console.log(strength);
+        document.querySelector('#color').style.opacity =strength;
+    }
+</script>
